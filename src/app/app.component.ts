@@ -6,7 +6,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'clr-ng-examples-app-root',
+  selector: 'clr-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
