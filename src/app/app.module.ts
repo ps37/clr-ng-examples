@@ -32,7 +32,7 @@ export function moduleFinder(componentName: string): string {
 export const docJson1: CompodocSchema = (componentsDocumentationJson as unknown) as CompodocSchema;
 export const docJson2: CompodocSchema = (examplesDocumentationJson as unknown) as CompodocSchema;
 export const sbInfo: StackBlitzInfo = {
-  templateId: 'clarity-v4-light-theme',
+  templateId: 'clarity-angular-examples-starter-template',
   projectName: 'Clarity Angular Examples',
   moduleFinder,
 };
