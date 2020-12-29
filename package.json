@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "build-clarity-doc": "mkdir -p src/gen && node node_modules/@vmw/ng-live-docs/index.js clarity-src/packages/angular/projects/clr-angular/tsconfig.lib.json clarity-src/packages/angular/projects/clr-angular/src/public-api.ts src/gen/components-doc.json",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
