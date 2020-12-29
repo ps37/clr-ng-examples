@@ -1,0 +1,14 @@
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# Ignore artifacts:
+build
+coverage
+
+# IDEs and editors
+/.idea
