@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "start": "npm run build-examples-doc; npm run ng serve",
     "build-clarity-doc": "mkdir -p src/gen && node node_modules/@vmw/ng-live-docs/index.js clarity-src/packages/angular/projects/clr-angular/tsconfig.lib.json clarity-src/packages/angular/projects/clr-angular/src/public-api.ts src/gen/components-doc.json",
-    "start": "ng serve",
+    "build-examples-doc": "mkdir -p src/gen && node node_modules/@vmw/ng-live-docs/index.js tsconfig.app.json src/main.ts src/gen/examples-doc.json",
     "build": "ng build",
     "test": "ng test",
     "e2e": "ng e2e",
@@ -22,13 +23,15 @@
     "@angular/platform-browser-dynamic": "~11.0.5",
     "@angular/router": "~11.0.5",
     "@clr/angular": "4.0.8",
+    "@clr/icons": "4.0.8",
+    "@clr/ui": "4.0.8",
     "@vmw/ng-live-docs": "0.0.8",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "lit-html": "^1.1.2",
+    "prismjs": "^1.17.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2",
-    "@clr/ui": "4.0.8",
-    "@clr/icons": "4.0.8",
-    "@webcomponents/webcomponentsjs": "^2.0.0"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1100.5",
