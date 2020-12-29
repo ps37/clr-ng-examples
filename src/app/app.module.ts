@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClarityModule } from '@clr/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ExamplesModule } from './examples.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     ClarityModule,
     BrowserAnimationsModule,
+    ExamplesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
