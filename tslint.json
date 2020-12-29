@@ -1,6 +1,6 @@
 {
   "extends": "tslint:recommended",
-  "rulesDirectory": ["codelyzer", "tslint-microsoft-contrib"],
+  "rulesDirectory": ["codelyzer"],
   "rules": {
     "adjacent-overload-signatures": false,
     "array-type": false,
