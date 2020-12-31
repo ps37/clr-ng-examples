@@ -1,0 +1,36 @@
+# Trigger the workflow on push to any branch
+name: clr-ng-examples
+on:
+    push:
+
+jobs:
+    build-app:
+      runs-on: ubuntu-latest
+      name: Build /src/app
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/cache@v1
+          with:
+            path: ./dist/clr-ng-examples
+            key: ${{github.sha}}-clr-ng-examples
+        - run: |
+            npm ci
+            npm run build-examples-doc
+            npm run build
+
+    gh-pages-deploy:
+      runs-on: ubuntu-latest
+      name: Deploying to Github pages
+      needs: [build-app]
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/cache@v1
+          with:
+            path: ./dist/clr-ng-examples
+            key: ${{github.sha}}-clr-ng-examples
+        - run: |
+            npm ci
+            npx ng deploy --no-build
+          if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
