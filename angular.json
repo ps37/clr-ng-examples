@@ -119,6 +119,16 @@
               "devServerTarget": "clr-ng-examples:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "repo": "https://github.com/ps37/clr-ng-examples",
+            "baseHref": "/clr-ng-examples/",
+            "noSilent": true,
+            "name": "ps37",
+            "email": "prudhvi.af121@gmail.com"
+          }
         }
       }
     }
