@@ -28,9 +28,10 @@ jobs:
           with:
             path: ./dist/clr-ng-examples
             key: ${{github.sha}}-clr-ng-examples
-        - run: |
-            npm ci
-            npx ng deploy --no-build
+        - name: Install node modules
+          run: npm ci
+        - name: Run ng deploy
+          run: npx ng deploy --no-build
           if: github.event_name == 'push' && github.ref == 'refs/heads/main'
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
