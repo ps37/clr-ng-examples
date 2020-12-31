@@ -16,7 +16,7 @@ jobs:
         - run: |
             npm ci
             npm run build-examples-doc
-            npm run build
+            npm run build:prod
 
     gh-pages-deploy:
       runs-on: ubuntu-latest
